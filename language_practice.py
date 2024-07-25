@@ -29,7 +29,7 @@ good_answers = 0
 def start():
     while True:
         try:
-            a = str(input(f"Which language do you want to practice?{languages[0]}/{languages[1]}\n"))
+            a = str(input(f"Which language do you want to practice? {languages[0]}/{languages[1]}\n"))
             if a == languages[0]:
                 main("1")
                 break
@@ -43,10 +43,9 @@ def start():
 def main(n):
     global good_answers
     for i in range(len(english_words)):
-        a = random.randrange(0, len(english_words))
+        a = random.randrange(0, len(english_words)) 
         match n:
             case "1":
-                print(good_answers)
                 print(your_languages_words[a])
                 e = input("")
                 if e == english_words[a]:
@@ -55,7 +54,6 @@ def main(n):
                 else:
                     print("not right, but this is the proper answer: " + english_words[a] + "\n next:")
             case "2":
-                print(good_answers)
                 print(english_words[a])
                 e = input("")
                 if e == your_languages_words[a]:
